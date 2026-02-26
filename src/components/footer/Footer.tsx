@@ -24,7 +24,7 @@ const Footer = () => {
                         <div className="flex items-center space-x-2">
                             <Image src="/logo.png" width={40} height={40} alt="Downtown Realty Logo" />
                             <span className="font-display text-2xl font-bold">
-                                Downtown <span className="text-brand">Realty</span>
+                                Downtown <span className="text-brand">Realtyj</span>
                             </span>
                         </div>
                         <p className="text-sandstone/70 text-sm leading-relaxed">
@@ -79,7 +79,7 @@ const Footer = () => {
                             Follow Us
                         </h4>
                         <div className="flex gap-4">
-                            {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+                            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
                                 <a
                                     key={i}
                                     href="#"

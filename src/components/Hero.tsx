@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
     return (
@@ -11,7 +11,7 @@ const Hero = () => {
                 />
                 <div className="w-full h-screen absolute top-0 left-0 bg-black/60 z-0"></div>
             </div>
-            <div className="w-full h-full flex flex-col items-center justify-center z-10 absolute mt-76">
+            <div className="w-full h-full flex flex-col items-center justify-center z-10 absolute mt-88">
                 <h1 className="max-w-5xl text-4xl sm:text-6xl md:text-6xl font-bold text-white text-center">
                     Curating Patna's <br/>
                     <span className="text-gold">Premier Living Spaces...</span>
@@ -27,10 +27,13 @@ const Hero = () => {
                         Explore Township
                     </button>
                     <button type="button"
-                        className="bg-transparent border border-white text-white font-semibold px-6 py-3 rounded-md mt-8 hover:bg-white hover:text-black transition-colors cursor-pointer"
+                        className="bg-black/50 border border-white text-white font-semibold px-6 py-3 rounded-md mt-8 hover:bg-white hover:text-black transition-colors cursor-pointer"
                     >
                         Our Expertise
                     </button>
+                </div>
+                <div className="mt-20 flex justify-center">
+                    <ChevronDown size={40} strokeWidth={2} className="text-brand animate-bounce-y" />
                 </div>
             </div>
         </div>
