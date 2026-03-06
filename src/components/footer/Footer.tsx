@@ -3,14 +3,13 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Twitter,
   MapPin,
   Phone,
   Mail,
-  Diamond,
+  Calendar
 } from 'lucide-react';
 
-import { quickLinks } from './utils';
+import { footerLinks, quickLinks } from './constant';
 
 const Footer = () => {
     return (
@@ -64,11 +63,15 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sandstone/70 text-sm">
                                 <Phone className="w-5 h-5 text-brand shrink-0" />
-                                <span>+91 99310 90798, +91 90318 45003</span>
+                                <span>+91 90318 45014, +91 90318 45005</span>
                             </li>
                             <li className="flex items-center gap-3 text-sandstone/70 text-sm">
                                 <Mail className="w-5 h-5 text-brand shrink-0" />
                                 <a href="mailto:info@downtownrealtyj.com" className="hover:text-gold transition-colors">info@downtownrealtyj.com</a>
+                            </li>
+                            <li className="flex items-center gap-3 text-sandstone/70 text-sm">
+                                <Calendar className="w-5 h-5 text-brand shrink-0" />
+                                <span>10 AM - 7 PM<br />Open On Sunday</span>
                             </li>
                         </ul>
                     </div>
@@ -79,13 +82,15 @@ const Footer = () => {
                             Follow Us
                         </h4>
                         <div className="flex gap-4">
-                            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
+                            {footerLinks.map((obj, i) => (
                                 <a
-                                    key={i}
-                                    href="#"
+                                    key={obj.title}
+                                    href={obj.link}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
                                     className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-midnight transition-all duration-300"
                                 >
-                                    <Icon className="w-5 h-5" />
+                                    <obj.icon className="w-5 h-5" />
                                 </a>
                             ))}
                         </div>
