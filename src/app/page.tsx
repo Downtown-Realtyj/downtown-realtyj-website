@@ -1,11 +1,11 @@
 import Hero from "../components/Hero";
-import FeaturedProperty from "../components/FeaturedProperty";
+import Vision from "../components/Vision";
 
 export default function Home() {
   return (
     <main className="w-full min-h-screen flex flex-col">
       <Hero />
-      <FeaturedProperty />
+      <Vision />
     </main>
   );
 }
