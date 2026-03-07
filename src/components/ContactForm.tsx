@@ -125,7 +125,7 @@ const ContactForm = () => {
                 {/* Left Side - Contact Details */}
                 <div className="bg-gold text-black p-8 md:p-10 flex flex-col justify-between">
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Connect With Us</h2>
                         <p className="text-slate-700 mb-8">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
 
                         {/* Contact Info Items */}
