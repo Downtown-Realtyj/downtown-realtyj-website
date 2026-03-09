@@ -91,7 +91,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sandstone/70 text-sm">
                                 <Calendar className="w-5 h-5 text-brand shrink-0" />
-                                <span>10 AM - 7 PM<br />Open On Sunday</span>
+                                <span>Office Hours: 10 AM - 7 PM<br />Open On Sunday</span>
                             </li>
                         </ul>
                     </div>

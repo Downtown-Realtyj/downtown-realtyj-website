@@ -1,119 +1,47 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, CheckCircle, AlertCircle } from 'lucide-react'; 
+
+import { requirements } from './constant';
+import { validateForm } from '../../utils/formValidation';
 
 const ContactForm = () => {
-    const formRef = useRef<HTMLFormElement>(null);
-    const [errors, setErrors] = useState<Record<string, string>>({});
-    const [isLoading, setIsLoading] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [errors, setErrors] = useState<Record<string, string>>({});
 
-    const requirements = [
-        'Apartment Purchase',
-        'Land Investment',
-        'Commercial Property',
-        'Other',
-    ];
+    const onSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setSubmitStatus('idle');
 
-    const getFormData = () => {
-        if (!formRef.current) return null;
-        return new FormData(formRef.current);
-    };
+        const form = event.currentTarget;
+        const formData = new FormData(form);
 
-    const validateForm = () => {
-        const formData = getFormData();
-        if (!formData) return false;
-
-        const newErrors: Record<string, string> = {};
-        const name = (formData.get('name') as string)?.trim();
-        const phone = (formData.get('phone') as string)?.trim();
-        const requirement = formData.get('requirement') as string;
-        const email = (formData.get('email') as string)?.trim();
-
-        if (!name) {
-            newErrors.name = 'Name is required';
-        }
-
-        if (!phone) {
-            newErrors.phone = 'Phone number is required';
-        } else if (!/^[0-9]{10}$/.test(phone.replace(/\D/g, ''))) {
-            newErrors.phone = 'Please enter a valid 10-digit phone number';
-        }
-
-        if (!requirement) {
-            newErrors.requirement = 'Please select a requirement';
-        }
-
-        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            newErrors.email = 'Please enter a valid email address';
-        }
-
-        setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
-    };
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name } = e.target;
-        // Clear error for this field when user starts typing
-        if (errors[name]) {
-            setErrors(prev => ({
-                ...prev,
-                [name]: '',
-            }));
-        }
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (!validateForm()) {
+        // Form Validation
+        const validationErrors = validateForm(formData);
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
             return;
         }
 
+        setErrors({});
         setIsLoading(true);
-        setSubmitStatus('idle');
+        formData.append("access_key", "ded9bf88-db81-45d0-9d00-c141f41ecfb3");
 
         try {
-            const formData = getFormData();
-            if (!formData) {
-                setSubmitStatus('error');
-                setIsLoading(false);
-                return;
-            }
-
-            // Web3Forms configuration
-            const response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || 'test_key',
-                    name: formData.get('name'),
-                    phone: formData.get('phone'),
-                    email: formData.get('email') || 'not-provided@example.com',
-                    requirement: formData.get('requirement'),
-                    message: formData.get('message') || 'No additional message',
-                    subject: `New Contact Form Submission from ${formData.get('name')}`,
-                    from_name: 'Downtown Realtyj Website',
-                }),
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
             });
 
-            if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
                 setSubmitStatus('success');
-                if (formRef.current) {
-                    formRef.current.reset();
-                }
-                setTimeout(() => setSubmitStatus('idle'), 5000);
-            } else {
-                setSubmitStatus('error');
-                setTimeout(() => setSubmitStatus('idle'), 5000);
+                form.reset();
             }
         } catch (error) {
-            console.error('Form submission error:', error);
             setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
         } finally {
             setIsLoading(false);
         }
@@ -182,7 +110,7 @@ const ContactForm = () => {
                     <div className="border-t border-slate-700 pt-6 mt-8">
                         <h4 className="font-semibold text-black mb-3">Business Hours</h4>
                         <ul className="space-y-2 text-slate-800 text-sm">
-                            <li>Monday - Saturday: 10:00 AM - 7:00 PM</li>
+                            <li>Office Timings: 10:00 AM - 7:00 PM</li>
                             <li>Sunday: Open</li>
                         </ul>
                     </div>
@@ -217,7 +145,7 @@ const ContactForm = () => {
                     )}
 
                     {/* Form */}
-                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={onSubmit} className="space-y-5">
                         {/* Name */}
                         <div>
                             <label htmlFor="name" className="block text-sm font-semibold text-slate-900 mb-2">
@@ -227,13 +155,13 @@ const ContactForm = () => {
                                 type="text"
                                 id="name"
                                 name="name"
-                                onChange={handleChange}
                                 className={`w-full px-4 py-2.5 rounded-lg border-2 transition-colors focus:outline-none ${
                                     errors.name
                                         ? 'border-red-500 focus:border-red-600 bg-red-50'
                                         : 'border-slate-200 focus:border-brand bg-white'
                                 }`}
                                 placeholder="John Doe"
+                                required
                             />
                             {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                         </div>
@@ -247,13 +175,13 @@ const ContactForm = () => {
                                 type="tel"
                                 id="phone"
                                 name="phone"
-                                onChange={handleChange}
                                 className={`w-full px-4 py-2.5 rounded-lg border-2 transition-colors focus:outline-none ${
                                     errors.phone
                                         ? 'border-red-500 focus:border-red-600 bg-red-50'
                                         : 'border-slate-200 focus:border-brand bg-white'
                                 }`}
-                                placeholder="+91 98765 43210"
+                                placeholder="98765 43210"
+                                required
                             />
                             {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
                         </div>
@@ -266,12 +194,12 @@ const ContactForm = () => {
                             <select
                                 id="requirement"
                                 name="requirement"
-                                onChange={handleChange}
                                 className={`w-full px-4 py-2.5 rounded-lg border-2 transition-colors focus:outline-none ${
                                     errors.requirement
                                         ? 'border-red-500 focus:border-red-600 bg-red-50'
                                         : 'border-slate-200 focus:border-brand bg-white'
                                 }`}
+                                required
                             >
                                 <option value="">Select a requirement</option>
                                 {requirements.map(req => (
@@ -290,7 +218,6 @@ const ContactForm = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                onChange={handleChange}
                                 className={`w-full px-4 py-2.5 rounded-lg border-2 transition-colors focus:outline-none ${
                                     errors.email
                                         ? 'border-red-500 focus:border-red-600 bg-red-50'
@@ -309,7 +236,6 @@ const ContactForm = () => {
                             <textarea
                                 id="message"
                                 name="message"
-                                onChange={handleChange}
                                 rows={3}
                                 className="w-full px-4 py-2.5 rounded-lg border-2 border-slate-200 focus:border-brand focus:outline-none transition-colors bg-white resize-none"
                                 placeholder="Tell us more about your requirements..."

@@ -1,4 +1,4 @@
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../../components/contact-us/ContactForm';
 
 export const metadata = {
   title: 'Contact Us | Downtown Realtyj',
