@@ -212,7 +212,7 @@ const ContactForm = () => {
                         {/* Email */}
                         <div>
                             <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                                Email Address <span className="text-slate-500 text-xs">(optional)</span>
+                                Email <span className="text-slate-500 text-xs">(optional)</span>
                             </label>
                             <input
                                 type="email"

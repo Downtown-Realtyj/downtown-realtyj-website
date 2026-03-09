@@ -121,25 +121,27 @@ const InterestForm = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Name */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
+                                    <label htmlFor="name" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
                                     <input
                                         type="text"
-                                        name="full_name"
+                                        name="name"
+                                        id="name"
                                         className={`w-full px-4 py-3 bg-slate-50 border rounded-lg focus:ring-2 focus:ring-brand outline-none transition-all ${
-                                            errors.full_name ? "border-red-500 bg-red-50" : "border-slate-200"
+                                            errors.name ? "border-red-500 bg-red-50" : "border-slate-200"
                                         }`}
                                         placeholder="John Doe"
                                         required
                                     />
-                                    {errors.full_name && <p className="text-xs text-red-500">{errors.full_name}</p>}
+                                    {errors.name && <p className="text-xs text-red-500">{errors.full_name}</p>}
                                 </div>
 
                                 {/* Phone */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone Number</label>
+                                    <label htmlFor="phone" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone Number</label>
                                     <input
                                         type="tel"
                                         name="phone"
+                                        id="phone"
                                         className={`w-full px-4 py-3 bg-slate-50 border rounded-lg focus:ring-2 focus:ring-brand outline-none transition-all ${
                                             errors.phone ? "border-red-500 bg-red-50" : "border-slate-200"
                                         }`}
@@ -152,10 +154,11 @@ const InterestForm = () => {
 
                             {/* Email */}
                             <div className="space-y-2">
-                                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
+                                <label htmlFor="email" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
                                 <input
                                     type="email"
                                     name="email"
+                                    id="email"
                                     className={`w-full px-4 py-3 bg-slate-50 border rounded-lg focus:ring-2 focus:ring-brand outline-none transition-all ${
                                         errors.email ? "border-red-500 bg-red-50" : "border-slate-200"
                                     }`}
@@ -166,10 +169,11 @@ const InterestForm = () => {
 
                             {/* Message */}
                             <div className="space-y-2">
-                                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message / Enquiry</label>
+                                <label htmlFor="message" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Message / Enquiry</label>
                                 <textarea
-                                    rows={4}
+                                    rows={3}
                                     name="message"
+                                    id="message"
                                     className={`w-full px-4 py-3 bg-slate-50 border rounded-lg focus:ring-2 focus:ring-brand outline-none transition-all resize-none ${
                                         errors.message ? "border-red-500 bg-red-50" : "border-slate-200"
                                     }`}
