@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle, AlertCircle } from "lucide-react";
 import { validateForm } from "../utils/formValidation";
 
 const InterestForm = () => {
-    const [result, setResult] = useState<string>("");
-    const [loading, setLoading] = useState<boolean>(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     const onSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setResult("");
+        setSubmitStatus('idle');
         
         const form = event.currentTarget;
         const formData = new FormData(form);
@@ -23,9 +23,8 @@ const InterestForm = () => {
             return;
         }
 
-        // Clear errors and start loading
         setErrors({});
-        setLoading(true);
+        setIsLoading(true);
         formData.append("access_key", "d6f062af-ef51-4958-af46-f9f7fdce45ed");
 
         try {
@@ -36,15 +35,15 @@ const InterestForm = () => {
 
             const data = await response.json();
             if (data.success) {
-                setResult("Form Submitted Successfully");
+                setSubmitStatus('success');
                 form.reset();
             } else {
-                setResult("Something went wrong. Please try again.");
+                setSubmitStatus('error');
             }
         } catch (error) {
-            setResult("Unexpected error occurred.");
+            setSubmitStatus('error');
         } finally {
-            setLoading(false);
+            setIsLoading(false);
         }
     };
 
@@ -97,7 +96,28 @@ const InterestForm = () => {
                     {/* Right Side Form */}
                     <div className="bg-white rounded-3xl p-10 text-slate-900 shadow-2xl">
                         <h4 className="text-2xl font-bold mb-8">Register Interest</h4>
-                        <form className="space-y-4" onSubmit={onSubmit}>
+                        
+                        {/* Success Message */}
+                        {submitStatus === 'success' && (
+                            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3 animate-fade-in-scale">
+                                <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                                <div>
+                                    <p className="text-green-800 text-sm font-medium">Interest registered successfully! We'll contact you soon.</p>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Error Message */}
+                        {submitStatus === 'error' && (
+                            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex gap-3 animate-fade-in-scale">
+                                <AlertCircle className="w-5 h-5 text-red-600 shrink-0" />
+                                <div>
+                                    <p className="text-red-800 text-sm font-medium">Something went wrong. Please try again.</p>
+                                </div>
+                            </div>
+                        )}
+
+                        <form onSubmit={onSubmit} className="space-y-4">
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Name */}
                                 <div className="space-y-2">
@@ -158,19 +178,19 @@ const InterestForm = () => {
                                 {errors.message && <p className="text-xs text-red-500">{errors.message}</p>}
                             </div>
 
-                            {/* Submission Status Message */}
-                            {result && (
-                                <p className={`text-sm font-medium text-center ${result.includes("Successfully") ? "text-green-600" : "text-red-600"}`}>
-                                    {result}
-                                </p>
-                            )}
-
                             <button
-                                className="w-full py-3 bg-brand hover:bg-brand/90 text-black font-bold rounded-lg transition-all shadow-lg shadow-brand/20 cursor-pointer disabled:opacity-50"
+                                className="w-full py-3 bg-brand hover:bg-brand/90 text-black font-bold rounded-lg transition-all shadow-lg shadow-brand/20 cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
                                 type="submit"
-                                disabled={loading}
+                                disabled={isLoading}
                             >
-                                {loading ? "Submitting..." : "Submit Interest"}
+                                {isLoading ? (
+                                    <>
+                                        <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
+                                        Submitting...
+                                    </>
+                                ) : (
+                                    "Submit Interest"
+                                )}
                             </button>
                             <p className="text-[10px] text-slate-400 text-center uppercase tracking-widest">
                                 We respect your privacy. No spam, only updates.
