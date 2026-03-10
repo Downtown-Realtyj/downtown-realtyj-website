@@ -2,6 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+
 import ErrorIllustration from '../components/error/ErrorIllustration';
 import ErrorPageLayout from '../components/error/ErrorPageLayout';
 
@@ -23,7 +25,8 @@ export default function NotFound() {
                 onClick={handleGoBack}
                 className="w-full sm:w-auto px-6 py-3 bg-brand/20 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-black transition-colors duration-300 cursor-pointer"
             >
-                ← Go Back
+                <ArrowLeft className="mr-2 inline" />
+                Go Back
             </button>
             <Link
                 href="/"
