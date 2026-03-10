@@ -76,7 +76,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={toggleMobileMenu}
-                    className="md:hidden p-2 text-white hover:text-brand transition-colors"
+                    className="md:hidden p-2 text-white hover:text-brand transition-colors cursor-pointer"
                     aria-label="Toggle menu"
                 >
                     {isMobileMenuOpen ? (
@@ -89,14 +89,14 @@ const Navbar = () => {
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
-                <div className="fixed inset-0 top-16 z-40 bg-black/90 backdrop-blur-md md:hidden">
+                <div className="max-h-max fixed inset-0 top-16 z-40 bg-gold/90 backdrop-blur-md md:hidden">
                     <div className="flex flex-col space-y-4 px-4 py-6">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 onClick={closeMobileMenu}
-                                className="text-white text-base font-medium py-2 px-4 rounded-md hover:bg-brand/20 hover:text-brand transition-colors"
+                                className="text-black text-base font-medium py-2 px-4 rounded-md hover:bg-brand/20 hover:text-brand transition-colors"
                             >
                                 {link.name}
                             </Link>
