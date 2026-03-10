@@ -2,5 +2,21 @@
     "HomePage": {
         "title": "Curating Patna's Premier Living Spaces...",
         "description": "Discover your dream home in Patna with Downtown Realtyj. We specialize in curating the finest residential properties, offering unparalleled expertise and personalized service to help you find the perfect living space. Explore our exclusive listings and experience the pinnacle of real estate excellence in Patna."
+    },
+    "ErrorPages": {
+        "notFound": {
+            "errorCode": "404",
+            "heading": "Page Not Found",
+            "description": "The page you're looking for might have been moved or doesn't exist. Let's get you back on track.",
+            "goBackButton": "← Go Back",
+            "homeButton": "Back to Home"
+        },
+        "serverError": {
+            "errorCode": "500",
+            "heading": "Something Went Wrong",
+            "description": "We encountered an unexpected error. Please try again or return to the home page.",
+            "tryAgainButton": "Try Again",
+            "homeButton": "Back to Home"
+        }
     }
 }

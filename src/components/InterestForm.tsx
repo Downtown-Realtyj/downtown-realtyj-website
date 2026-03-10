@@ -118,7 +118,7 @@ const InterestForm = () => {
                         )}
 
                         <form onSubmit={onSubmit} className="space-y-4">
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4">
                                 {/* Name */}
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name</label>

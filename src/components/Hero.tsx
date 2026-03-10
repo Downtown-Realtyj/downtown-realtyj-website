@@ -11,23 +11,23 @@ const Hero = () => {
                 />
                 <div className="absolute inset-0 bg-black/60"></div>
             </div>
-            <div className="relative w-full h-full flex flex-col items-center justify-center z-10 px-4 sm:px-6">
-                <h1 className="max-w-5xl text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
+            <div className="relative w-full h-full flex flex-col items-center justify-center z-10 px-4 sm:px-8">
+                <h1 className="max-w-5xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
                     Curating Patna's <br/>
                     <span className="text-gold">Premier Living Spaces...</span>
                 </h1>
-                <p className="text-white text-center max-w-3xl px-2 sm:px-4 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
+                <p className="text-white text-center max-w-3xl px-2 sm:px-4 mt-4 text-base md:text-lg lg:text-xl">
                     Redefining the landscape of urban living. Discover an exclusive portfolio of premium apartments, 
                     strategic land investments,  and future-ready infrastructure  tailored to build your tomorrow, today.
                 </p>
-                <div className="max-w-3xl mt-4 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full md:w-auto">
+                <div className="max-w-3xl w-full mt-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8">
                     <button type="button"
-                        className="w-full md:w-auto bg-brand text-black font-semibold px-6 py-3 rounded-md mt-8 hover:bg-brand/90 transition-colors cursor-pointer"
+                        className="w-full md:w-auto bg-brand text-black font-semibold px-6 py-3 rounded-md mt-4 hover:bg-brand/90 transition-colors cursor-pointer"
                     >
                         Explore Township
                     </button>
                     <button type="button"
-                        className="w-full md:w-auto bg-black/50 border border-white text-white font-semibold px-6 py-3 rounded-md mt-8 hover:bg-white hover:text-black transition-colors cursor-pointer"
+                        className="w-full md:w-auto bg-black/50 border border-white text-white font-semibold px-6 py-3 rounded-md mt-4 hover:bg-white hover:text-black transition-colors cursor-pointer"
                     >
                         Our Expertise
                     </button>
