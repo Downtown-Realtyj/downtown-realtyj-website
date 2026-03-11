@@ -1,4 +1,6 @@
-export const jsonLdData = {
+import { jsonLdSchema } from './jsonLdSchema';
+
+export const jsonLdData: jsonLdSchema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     'name': 'Downtown Realtyj Private Limited',
@@ -47,4 +49,4 @@ export const jsonLdData = {
       'https://www.facebook.com/1FercKXpzu/',
       'https://www.linkedin.com/company/downtown-realtyj-private-limited/about/'
     ]
-  };
+};

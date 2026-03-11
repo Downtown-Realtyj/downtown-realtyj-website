@@ -1,4 +1,10 @@
-export default function JsonLd({ data }: { data: any }) {
+import { jsonLdSchema } from "../utils/jsonLdSchema";
+
+interface JsonLdProps {
+  data: jsonLdSchema;
+}
+
+export default function JsonLd({ data }: JsonLdProps) {
     return (
         <script
             type="application/ld+json"
