@@ -58,7 +58,7 @@ const Navbar = () => {
             }`}>
                 {/* Logo and Brand */}
                 <div className="inline-flex items-center gap-1 sm:gap-2 shrink-0">
-                    <Image src="/logo.png" width={40} height={24} alt="Downtown Realty Logo" className="sm:w-10 sm:h-10" draggable="false"/>
+                    <Image src="/logo.png" width={40} height={40} alt="Downtown Realty Logo" draggable="false"/>
                     <Link href="/" className="text-base sm:text-xl md:text-2xl font-bold text-white whitespace-nowrap">
                         Downtown{' '}
                         <span className="text-brand">Realtyj</span>
