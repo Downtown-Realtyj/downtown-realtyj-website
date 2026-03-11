@@ -13,7 +13,6 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const pathname = usePathname();
-    console.log(pathname);
 
     useEffect(() => {
         const handleScroll = () => {

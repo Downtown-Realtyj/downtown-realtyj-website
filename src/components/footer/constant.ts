@@ -32,8 +32,12 @@ export const quickLinks = [
         href: "/services",
     },
     {
-        name: "Shridi Sai City",
-        href: "/shirdi-sai-city",
+        name: "Projects",
+        href: "/projects",
+    },
+    {
+        name: "Blogs",
+        href: "/blogs",
     },
     {
         name: "Contact Us",
