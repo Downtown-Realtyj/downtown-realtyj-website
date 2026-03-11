@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const Vision = () => {
 
@@ -9,13 +10,13 @@ const Vision = () => {
                     className="relative animate-fade-in-scale"
                 >
                     <div className="aspect-4/5 rounded-2xl overflow-hidden shadow-2xl">
-                        <img 
-                            src="https://picsum.photos/seed/director/800/1000" 
-                            alt="Director" 
+                        <Image
+                            src="/director-image.webp"
+                            alt="Director"
+                            width={800}
+                            height={1000}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="w-full h-full object-cover"
-                            referrerPolicy="no-referrer"
-                            loading="lazy"
-                            decoding="async"
                         />
                     </div>
                     <div className="absolute -bottom-6 -right-6 bg-gold text-black p-8 rounded-xl shadow-xl max-w-xs">

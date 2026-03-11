@@ -5,16 +5,19 @@ export const footerLinks = [
         title: 'LinkedIn',
         icon: Linkedin,
         link: 'https://www.linkedin.com/company/downtown-realtyj-private-limited/about/',
+        label: "Visit Downtown Realtyj on LinkedIn",
     },
     {
         title: 'Facebook',
         icon: Facebook,
-        link: '#',
+        link: 'https://www.facebook.com/1FercKXpzu/',
+        label: "Visit Downtown Realtyj on Facebook",
     },
     {
         title: 'Instagram',
         icon: Instagram,
         link: '#',
+        label: "Visit Downtown Realtyj on Instagram",
     }
 ];
 

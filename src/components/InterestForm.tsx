@@ -53,7 +53,7 @@ const InterestForm = () => {
                 <div className="grid lg:grid-cols-2 gap-20">
                     {/* Left Side Info */}
                     <div>
-                        <h2 className="text-brand font-bold uppercase tracking-widest mb-4">Get in Touch</h2>
+                        <h2 className="text-slate-600 font-bold uppercase tracking-widest mb-4">Get in Touch</h2>
                         <h3 className="text-4xl font-bold mb-8">Partner in Patna's Progress</h3>
 
                         <div className="space-y-8">
@@ -196,7 +196,7 @@ const InterestForm = () => {
                                     "Submit Interest"
                                 )}
                             </button>
-                            <p className="text-[10px] text-slate-400 text-center uppercase tracking-widest">
+                            <p className="text-[10px] text-slate-700 text-center uppercase tracking-widest">
                                 We respect your privacy. No spam, only updates.
                             </p>
                         </form>

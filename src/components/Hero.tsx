@@ -1,13 +1,18 @@
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
     return (
         <div className="w-full h-screen relative overflow-hidden flex flex-col">
             <div className="absolute inset-0 -z-10">
-                <img
+                <Image
                     src="/Hero_Banner.webp"
                     alt="Hero Banner Image"
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    quality={65} 
+                    sizes="100vw"
+                    className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/70"></div>
             </div>
