@@ -101,7 +101,7 @@ const Footer = () => {
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.8759537331084!2d85.0595149746839!3d25.609037914897872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed572adcdd512d%3A0xff647e3d145eb40e!2sLeeds%20Tower!5e0!3m2!1sen!2sin!4v1772866900749!5m2!1sen!2sin" 
                                 width="100%" 
                                 height="100%" 
-                                style={{ border:0, filter: 'grayscale(100%) invert(90%)' }} 
+                                style={{ border:0, filter: 'grayscale(90%) invert(95%)' }} 
                                 allowFullScreen
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"

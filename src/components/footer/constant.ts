@@ -28,6 +28,10 @@ export const quickLinks = [
         href: "/about",
     },
     {
+        name: "Services",
+        href: "/services",
+    },
+    {
         name: "Shridi Sai City",
         href: "/shirdi-sai-city",
     },
