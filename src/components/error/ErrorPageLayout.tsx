@@ -22,12 +22,12 @@ const ErrorPageLayout = ({
           </p>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             {heading}
           </h1>
 
           {/* Description */}
-          <p className="text-base md:text-lg text-white/70 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed">
             {description}
           </p>
         </div>

@@ -58,8 +58,8 @@ const Navbar = () => {
             }`}>
                 {/* Logo and Brand */}
                 <div className="inline-flex items-center gap-1 sm:gap-2 shrink-0">
-                    <Image src="/logo.png" width={40} height={40} alt="Downtown Realty Logo" draggable="false"/>
-                    <Link href="/" className="text-base sm:text-xl md:text-2xl font-bold text-white whitespace-nowrap">
+                    <Image src="/logo.png" width={45} height={45} alt="Downtown Realty Logo" draggable="false"/>
+                    <Link href="/" className="text-base sm:text-2xl md:text-2xl lg:text-3xl font-bold text-white whitespace-nowrap">
                         Downtown{' '}
                         <span className="text-brand">Realtyj</span>
                     </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
                         <Link 
                             key={link.name} 
                             href={link.href} 
-                            className="text-white text-sm md:text-base font-medium mx-2 md:mx-4 transition-colors hover:text-brand"
+                            className="text-white text-base md:text-lg font-medium mx-2 md:mx-4 transition-colors hover:text-brand"
                         >
                             {link.name}
                         </Link>

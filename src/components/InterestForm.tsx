@@ -53,17 +53,17 @@ const InterestForm = () => {
                 <div className="grid lg:grid-cols-2 gap-20">
                     {/* Left Side Info */}
                     <div>
-                        <h2 className="text-slate-600 font-bold uppercase tracking-widest mb-4">Get in Touch</h2>
-                        <h3 className="text-4xl font-bold mb-8">Partner in Patna's Progress</h3>
+                        <h2 className="text-slate-600 font-bold uppercase tracking-widest mb-4 text-sm md:text-base">Get in Touch</h2>
+                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Partner in Patna's Progress</h3>
 
                         <div className="space-y-8">
                             <div className="flex gap-6">
-                                <div className="w-12 h-12 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <MapPin className="text-brand w-6 h-6" />
+                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                                    <MapPin className="text-brand w-7 h-7 md:w-8 md:h-8" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-lg mb-1">Corporate Office</p>
-                                    <p className="text-slate-900">
+                                    <p className="font-bold text-lg md:text-xl mb-1">Corporate Office</p>
+                                    <p className="text-slate-900 text-base md:text-lg">
                                         3rd Floor, Leeds Tower, Rupaspur <br />
                                         Bailey Road, Patna, Bihar (801503)
                                     </p>
@@ -71,31 +71,31 @@ const InterestForm = () => {
                             </div>
 
                             <div className="flex gap-6">
-                                <div className="w-12 h-12 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <Phone className="text-brand w-6 h-6" />
+                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                                    <Phone className="text-brand w-7 h-7 md:w-8 md:h-8" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-lg mb-1">Call Us</p>
-                                    <p className="text-slate-900">+91 90318 45014</p>
-                                    <p className="text-slate-900">+91 90318 45005</p>
+                                    <p className="font-bold text-lg md:text-xl mb-1">Call Us</p>
+                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45014</p>
+                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45005</p>
                                 </div>
                             </div>
 
                             <div className="flex gap-6">
-                                <div className="w-12 h-12 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <Mail className="text-brand w-6 h-6" />
+                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
+                                    <Mail className="text-brand w-7 h-7 md:w-8 md:h-8" />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-lg mb-1">Email</p>
-                                    <p className="text-slate-800">info@downtownrealtyj.com</p>
+                                    <p className="font-bold text-lg md:text-xl mb-1">Email</p>
+                                    <p className="text-slate-800 text-base md:text-lg">info@downtownrealtyj.com</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Right Side Form */}
-                    <div className="bg-white rounded-3xl p-10 text-slate-900 shadow-2xl">
-                        <h4 className="text-2xl font-bold mb-8">Register Interest</h4>
+                    <div className="bg-white rounded-3xl p-10 md:p-12 text-slate-900 shadow-2xl">
+                        <h4 className="text-2xl md:text-3xl font-bold mb-8">Register Interest</h4>
                         
                         {/* Success Message */}
                         {submitStatus === 'success' && (

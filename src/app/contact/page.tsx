@@ -12,10 +12,10 @@ export default function ContactPage() {
         <div className="pt-32 pb-12 md:pt-32 md:pb-16">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
                         Let&apos;s Connect
                     </h1>
-                    <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-2xl text-slate-600 max-w-2xl mx-auto">
                         Have questions about our properties or services? We&apos;re here to help you find your perfect space in Patna.
                     </p>
                 </div>
@@ -30,14 +30,14 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">Response Time</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-lg md:text-xl font-semibold text-slate-900 mb-4">Response Time</h3>
+                <p className="text-slate-600 text-base md:text-lg">
                     We typically respond to inquiries within 24 hours. For urgent matters, please call us directly.
                 </p>
             </div>
             <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">Follow Us</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-lg md:text-xl font-semibold text-slate-900 mb-4">Follow Us</h3>
+                <p className="text-slate-600 text-base md:text-lg">
                     Connect with us on social media for updates on new properties and market insights.
                 </p>
             </div>

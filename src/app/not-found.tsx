@@ -23,14 +23,14 @@ export default function NotFound() {
         >
             <button
                 onClick={handleGoBack}
-                className="w-full sm:w-auto px-6 py-3 bg-brand/20 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-black transition-colors duration-300 cursor-pointer"
+                className="w-full sm:w-auto px-8 py-3 md:py-4 bg-brand/20 border border-brand text-brand font-semibold text-base md:text-lg rounded-md hover:bg-brand hover:text-black transition-colors duration-300 cursor-pointer"
             >
                 <ArrowLeft className="mr-2 inline" />
                 Go Back
             </button>
             <Link
                 href="/"
-                className="w-full sm:w-auto px-6 py-3 bg-brand text-black font-semibold rounded-md hover:bg-brand/90 transition-colors duration-300 cursor-pointer inline-block text-center"
+                className="w-full sm:w-auto px-8 py-3 md:py-4 bg-brand text-black font-semibold text-base md:text-lg rounded-md hover:bg-brand/90 transition-colors duration-300 cursor-pointer inline-block text-center"
             >
                 Back to Home
             </Link>

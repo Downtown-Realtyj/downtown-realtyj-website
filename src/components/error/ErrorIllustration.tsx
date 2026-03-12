@@ -2,7 +2,7 @@ import { ErrorIllustrationProps } from "./errorInterface";
 
 const ErrorIllustration = ({ 
   type,
-  className = "w-32 h-32 md:w-48 md:h-48" 
+  className = "w-32 h-32 md:w-56 md:h-56 lg:w-64 lg:h-64" 
 }: ErrorIllustrationProps) => {
   if (type === '404') {
     return (

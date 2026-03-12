@@ -21,19 +21,19 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <div className="flex items-center space-x-2">
-                            <Image src="/logo.png" width={40} height={40} alt="Downtown Realty Logo" />
-                            <span className="font-display text-2xl font-bold">
+                            <Image src="/logo.png" width={45} height={45} alt="Downtown Realty Logo" />
+                            <span className="font-display text-2xl md:text-3xl font-bold">
                                 Downtown <span className="text-brand">Realtyj</span>
                             </span>
                         </div>
-                        <p className="text-sandstone/70 text-sm leading-relaxed">
+                        <p className="text-sandstone/70 text-sm md:text-base leading-relaxed">
                             Curating premier living spaces with a focus on future-ready
                             infrastructure and sustainable development.
                         </p>
 
                         {/* Social */}
                         <div>
-                            <h4 className="text-brand font-bold uppercase tracking-wider text-sm mb-6">
+                            <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                                 Follow Us On
                             </h4>
                             <div className="flex gap-4">
@@ -55,7 +55,7 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm mb-6">
+                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                             Quick Links
                         </h4>
                         <ul className="space-y-3">
@@ -63,7 +63,7 @@ const Footer = () => {
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        className="text-sandstone/70 hover:text-gold transition-colors text-sm"
+                                        className="text-sandstone/70 hover:text-gold transition-colors text-sm md:text-base"
                                     >
                                         {link.name}
                                     </a>
@@ -74,23 +74,23 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm mb-6">
+                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                             Contact Us
                         </h4>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3 text-sandstone/70 text-sm">
+                            <li className="flex items-start gap-3 text-sandstone/70 text-sm md:text-base">
                                 <MapPin className="w-5 h-5 text-brand shrink-0" />
                                 <span>3rd Floor, Leeds Tower, Rupaspur,<br/>Bailey Road, Patna, Bihar (801503)</span>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm">
+                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
                                 <Phone className="w-5 h-5 text-brand shrink-0" />
                                 <span>90318 45014, 90318 45005</span>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm">
+                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
                                 <Mail className="w-5 h-5 text-brand shrink-0" />
                                 <a href="mailto:info@downtownrealtyj.com" className="hover:text-gold transition-colors">info@downtownrealtyj.com</a>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm">
+                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
                                 <Calendar className="w-5 h-5 text-brand shrink-0" />
                                 <span>Office Hours: 10 AM - 7 PM<br />Open On Sunday</span>
                             </li>
@@ -113,7 +113,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 text-center">
-                    <p className="text-sandstone/50 text-xs">
+                    <p className="text-sandstone/50 text-xs md:text-sm">
                         © {new Date().getFullYear()} Downtown Realtyj Private Limited. All rights reserved.
                     </p>
                 </div>

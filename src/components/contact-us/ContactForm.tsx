@@ -51,56 +51,56 @@ const ContactForm = () => {
         <div className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
                 {/* Left Side - Contact Details */}
-                <div className="bg-gold text-black p-8 md:p-10 flex flex-col justify-between">
+                <div className="bg-gold text-black p-8 md:p-12 lg:p-14 flex flex-col justify-between">
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6">Connect With Us</h2>
-                        <p className="text-slate-700 mb-8">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Connect With Us</h2>
+                        <p className="text-slate-700 mb-8 text-base md:text-lg">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
                         {/* Contact Info Items */}
                         <div className="space-y-6">
                             {/* Email */}
                             <div className="flex gap-4">
                                 <div className="shrink-0">
-                                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-brand/20">
-                                        <svg className="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-md bg-brand/20">
+                                        <svg className="h-6 w-6 md:h-7 md:w-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-black mb-1">Email</h3>
-                                    <p className="text-slate-800">info@downtownrealtyj.com</p>
+                                    <h3 className="font-semibold text-black mb-1 text-lg md:text-xl">Email</h3>
+                                    <p className="text-slate-800 text-base md:text-lg">info@downtownrealtyj.com</p>
                                 </div>
                             </div>
 
                             {/* Phone */}
                             <div className="flex gap-4">
                                 <div className="shrink-0">
-                                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-brand/20">
-                                        <svg className="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-md bg-brand/20">
+                                        <svg className="h-6 w-6 md:h-7 md:w-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                         </svg>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-black mb-1">Phone</h3>
-                                    <p className="text-slate-800">+91 90318 45005</p>
+                                    <h3 className="font-semibold text-black mb-1 text-lg md:text-xl">Phone</h3>
+                                    <p className="text-slate-800 text-base md:text-lg">+91 90318 45005</p>
                                 </div>
                             </div>
 
                             {/* Location */}
                             <div className="flex gap-4">
                                 <div className="shrink-0">
-                                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-brand/20">
-                                        <svg className="h-6 w-6 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="flex items-center justify-center h-12 w-12 md:h-14 md:w-14 rounded-md bg-brand/20">
+                                        <svg className="h-6 w-6 md:h-7 md:w-7 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-black mb-1">Location</h3>
-                                    <p className="text-slate-800">Patna, Bihar, India</p>
+                                    <h3 className="font-semibold text-black mb-1 text-lg md:text-xl">Location</h3>
+                                    <p className="text-slate-800 text-base md:text-lg">Patna, Bihar, India</p>
                                 </div>
                             </div>
                         </div>
@@ -108,8 +108,8 @@ const ContactForm = () => {
 
                     {/* Business Hours */}
                     <div className="border-t border-slate-700 pt-6 mt-8">
-                        <h4 className="font-semibold text-black mb-3">Business Hours</h4>
-                        <ul className="space-y-2 text-slate-800 text-sm">
+                        <h4 className="font-semibold text-black mb-3 text-lg">Business Hours</h4>
+                        <ul className="space-y-2 text-slate-800 text-sm md:text-base">
                             <li>Office Timings: 10:00 AM - 7:00 PM</li>
                             <li>Sunday: Open</li>
                         </ul>
