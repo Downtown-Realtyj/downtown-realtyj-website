@@ -9,10 +9,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: 'https://downtownrealtyj.com/about',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
             url: 'https://downtownrealtyj.com/contact',
             lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.6,
+            changeFrequency: 'monthly',
+            priority: 0.8,
         },
-    ]
+    ];
 }

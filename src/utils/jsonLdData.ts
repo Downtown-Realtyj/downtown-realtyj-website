@@ -7,7 +7,7 @@ export const jsonLdData: jsonLdSchema = {
     'image': 'https://www.downtownrealtyj.com/og-image.png',
     '@id': 'https://www.downtownrealtyj.com',
     'url': 'https://www.downtownrealtyj.com',
-    'telephone': '+91-9031845005',
+    'telephone': '+919031845005, +919031845014',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '3rd Floor, Leeds Tower, Nahar Chauk, Rupaspur, Bailey Road',
