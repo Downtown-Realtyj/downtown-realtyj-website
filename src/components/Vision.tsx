@@ -15,6 +15,8 @@ const Vision = () => {
                             alt="Director"
                             width={800}
                             height={1000}
+                            loading="lazy"
+                            decoding="async"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="w-full h-full object-cover"
                         />
