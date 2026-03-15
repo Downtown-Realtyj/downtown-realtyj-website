@@ -9,6 +9,7 @@ import {
   Calendar
 } from 'lucide-react';
 
+import MapBox from '../MapBox';
 import { footerLinks, quickLinks, googleMapsLink } from './constant';
 
 const Footer = () => {
@@ -97,18 +98,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="relative w-full aspect-video lg:aspect-square rounded-2xl overflow-hidden mb-8 border border-brand group shadow-sm">
-                            <iframe 
-                                title="Downtown Realtyj Office Location Map"
-                                src={googleMapsLink}
-                                width="100%" 
-                                height="100%" 
-                                style={{ border:0, filter: 'grayscale(90%) invert(95%)' }} 
-                                allowFullScreen
-                                loading="lazy" 
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
-                    </div>
+                    <MapBox />
                 </div>
 
                 {/* Bottom Bar */}
