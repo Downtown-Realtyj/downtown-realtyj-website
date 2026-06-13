@@ -1,22 +1,22 @@
-import { Linkedin, Instagram, Facebook } from "lucide-react";
+import { LinkedInIcon, InstagramIcon, FacebookIcon } from "../../utils/socialMediaIcons";
 
 export const footerLinks = [
     {
         title: 'LinkedIn',
-        icon: Linkedin,
+        icon: LinkedInIcon,
         link: 'https://www.linkedin.com/company/downtown-realtyj-private-limited/about/',
         label: "Visit Downtown Realtyj on LinkedIn",
     },
     {
         title: 'Facebook',
-        icon: Facebook,
-        link: 'https://www.facebook.com/1FercKXpzu/',
+        icon: FacebookIcon,
+        link: 'https://www.facebook.com/share/17iupmHnhe/',
         label: "Visit Downtown Realtyj on Facebook",
     },
     {
         title: 'Instagram',
-        icon: Instagram,
-        link: '#',
+        icon: InstagramIcon,
+        link: 'https://www.instagram.com/downtown_realtyj?igsh=YzI2MmU2cGR6Mm91',
         label: "Visit Downtown Realtyj on Instagram",
     }
 ];

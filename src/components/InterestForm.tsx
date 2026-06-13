@@ -76,8 +76,8 @@ const InterestForm = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-lg md:text-xl mb-1">Call Us</p>
-                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45014</p>
-                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45005</p>
+                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45010</p>
+                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45004</p>
                                 </div>
                             </div>
 

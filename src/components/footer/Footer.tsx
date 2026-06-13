@@ -1,8 +1,5 @@
 import Image from 'next/image';
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
   MapPin,
   Phone,
   Mail,
@@ -10,7 +7,7 @@ import {
 } from 'lucide-react';
 
 import MapBox from '../MapBox';
-import { footerLinks, quickLinks, googleMapsLink } from './constant';
+import { footerLinks, quickLinks } from './constant';
 
 const Footer = () => {
     return (
@@ -85,7 +82,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
                                 <Phone className="w-5 h-5 text-brand shrink-0" />
-                                <span>90318 45014, 90318 45005</span>
+                                <span>90318 45012, 90318 45010</span>
                             </li>
                             <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
                                 <Mail className="w-5 h-5 text-brand shrink-0" />
@@ -101,7 +98,6 @@ const Footer = () => {
                     <MapBox />
                 </div>
 
-                {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 text-center">
                     <p className="text-sandstone/50 text-xs md:text-sm">
                         © {new Date().getFullYear()} Downtown Realtyj Private Limited. All rights reserved.

@@ -6,8 +6,8 @@ const Hero = () => {
         <div className="w-full min-h-dvh relative overflow-hidden flex flex-col">
             <div className="absolute inset-0 -z-10 bg-black">
                 <Image
-                    src="/Hero_Banner.webp"
-                    alt="Hero Banner Image"
+                    src="/project_image.webp"
+                    alt="Core Ultrawdie Tower Image"
                     fill
                     priority
                     fetchPriority="high"

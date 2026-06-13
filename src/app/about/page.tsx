@@ -1,32 +1,4 @@
 import Image from 'next/image';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-    title: 'About Downtown Realtyj | Best Real Estate Company in Patna Bihar',
-    description: 'Learn why Downtown Realtyj is recognized as the best real estate company in Patna, Bihar. We develop modern townships, premium apartments, and plots.',
-    keywords: [
-        'best real estate company in patna bihar', 
-        'real estate companies in patna', 
-        'bihar real estate', 
-        'Downtown Realtyj'
-    ],
-    openGraph: {
-        title: 'About Downtown Realtyj | Patna Real Estate',
-        description: 'Developing modern communities and exceptional living spaces in Bihar.',
-        url: 'https://downtownrealtyj.com/about',
-        images: [
-            {
-                url: '/Hero_Banner.webp',
-                width: 1200,
-                height: 630,
-                alt: 'Downtown Realtyj - Patna Bihar',
-            },
-        ],
-    },
-    alternates: {
-        canonical: 'https://downtownrealtyj.com/about',
-    },
-};
 
 const AboutSection = () => {
     return (
@@ -59,7 +31,7 @@ const AboutSection = () => {
                             href="/projects" 
                             className="inline-block bg-brand text-black font-semibold py-3 px-8 rounded-md shadow-md hover:bg-brand/90 transition-colors duration-300"
                         >
-                            Explore Our Townships
+                            Explore Our Projects
                         </a>
                     </div>
                 </div>
@@ -67,13 +39,12 @@ const AboutSection = () => {
                 {/* Image Content */}
                 <div className="relative h-100px lg:h-125 w-full rounded-xl overflow-hidden shadow-2xl">
                     <Image
-                        src="/Hero_Banner.webp"
-                        alt="Downtown Realtyj - The best real estate company in Patna Bihar developing modern townships and apartments"
+                        src="/project_image.webp"
+                        alt="Downtown Realtyj is one of the best real estate company in Patna Bihar developing modern townships and apartments"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    {/* Optional Overlay for a premium look */}
                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
                 </div>
             </div>
