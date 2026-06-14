@@ -1,4 +1,4 @@
-import { LinkedInIcon, InstagramIcon, FacebookIcon } from "../../utils/socialMediaIcons";
+import { LinkedInIcon, InstagramIcon, FacebookIcon, whatsAppIcon } from "../../utils/socialMediaIcons";
 
 export const footerLinks = [
     {
@@ -18,6 +18,12 @@ export const footerLinks = [
         icon: InstagramIcon,
         link: 'https://www.instagram.com/downtown_realtyj?igsh=YzI2MmU2cGR6Mm91',
         label: "Visit Downtown Realtyj on Instagram",
+    },
+    {
+        title: 'WhatsApp',
+        icon: whatsAppIcon,
+        link: 'https://api.whatsapp.com/send?phone=+919031845010&text=What%20services%20do%20you%20offer%3F',
+        label: "Chat with Downtown Realtyj on WhatsApp",
     }
 ];
 
@@ -29,10 +35,6 @@ export const quickLinks = [
     {
         name: "About Us",
         href: "/about",
-    },
-    {
-        name: "Services",
-        href: "/services",
     },
     {
         name: "Projects",

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   MapPin,
   Phone,
@@ -59,12 +60,12 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
-                                    <a
+                                    <Link
                                         href={link.href}
                                         className="text-sandstone/70 hover:text-gold transition-colors text-sm md:text-base"
                                     >
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -75,20 +76,20 @@ const Footer = () => {
                         <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                             Contact Us
                         </h4>
-                        <ul className="space-y-4">
-                            <li className="flex items-start gap-3 text-sandstone/70 text-sm md:text-base">
+                        <ul className="w-full space-y-4">
+                            <li className="flex items-start gap-2 text-sandstone/70 text-sm md:text-base">
                                 <MapPin className="w-5 h-5 text-brand shrink-0" />
-                                <span>3rd Floor, Leeds Tower, Rupaspur,<br/>Bailey Road, Patna, Bihar (801503)</span>
+                                <span>3rd Floor, Leeds Tower, Rupaspur, Bailey Road,<br /> Patna, Bihar</span>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
+                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
                                 <Phone className="w-5 h-5 text-brand shrink-0" />
                                 <span>90318 45012, 90318 45010</span>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
+                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
                                 <Mail className="w-5 h-5 text-brand shrink-0" />
                                 <a href="mailto:info@downtownrealtyj.com" className="hover:text-gold transition-colors">info@downtownrealtyj.com</a>
                             </li>
-                            <li className="flex items-center gap-3 text-sandstone/70 text-sm md:text-base">
+                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
                                 <Calendar className="w-5 h-5 text-brand shrink-0" />
                                 <span>Office Hours: 10 AM - 7 PM<br />Open On Sunday</span>
                             </li>
@@ -98,10 +99,29 @@ const Footer = () => {
                     <MapBox />
                 </div>
 
-                <div className="pt-8 border-t border-white/10 text-center">
+                <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 border-t border-white/10 text-center">
                     <p className="text-sandstone/50 text-xs md:text-sm">
                         © {new Date().getFullYear()} Downtown Realtyj Private Limited. All rights reserved.
                     </p>
+
+                    <div>
+                        <Link 
+                            href="/privacy-policy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sandstone/50 hover:text-gold transition-colors text-xs md:text-sm mx-2"
+                        >
+                            Privacy Policy
+                        </Link>
+                        <Link 
+                            href="/sitemap.xml"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sandstone/50 hover:text-gold transition-colors text-xs md:text-sm mx-2"
+                        >
+                            Sitemap
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>
