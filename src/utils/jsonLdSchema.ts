@@ -5,7 +5,7 @@ export interface AreaServed {
 
 export interface jsonLdSchema {
     '@context': 'https://schema.org';
-    '@type': 'RealEstateAgent';
+    '@type': 'RealEstateCompany';
     name: string;
     image: string;
     '@id': string;

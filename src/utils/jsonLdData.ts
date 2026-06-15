@@ -2,12 +2,12 @@ import { jsonLdSchema } from './jsonLdSchema';
 
 export const jsonLdData: jsonLdSchema = {
     '@context': 'https://schema.org',
-    '@type': 'RealEstateAgent',
+    '@type': 'RealEstateCompany',
     'name': 'Downtown Realtyj Private Limited',
     'image': 'https://www.downtownrealtyj.com/og-image.png',
     '@id': 'https://www.downtownrealtyj.com',
     'url': 'https://www.downtownrealtyj.com',
-    'telephone': '+919031845005, +919031845014',
+    'telephone': '+919031845010, +919031845012',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '3rd Floor, Leeds Tower, Nahar Chauk, Rupaspur, Bailey Road',
@@ -46,7 +46,8 @@ export const jsonLdData: jsonLdSchema = {
       }
     ],
     'sameAs': [
-      'https://www.facebook.com/1FercKXpzu/',
-      'https://www.linkedin.com/company/downtown-realtyj-private-limited/about/'
+      'https://www.facebook.com/share/17iupmHnhe/',
+      'https://www.linkedin.com/company/downtown-realtyj-private-limited/about/',
+      'https://www.instagram.com/downtown_realtyj?igsh=YzI2MmU2cGR6Mm91',
     ]
 };
