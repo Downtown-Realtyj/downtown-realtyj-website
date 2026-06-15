@@ -52,7 +52,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
                     <div>
                         <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                             Quick Links
@@ -71,7 +70,6 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Contact Info */}
                     <div>
                         <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
                             Contact Us
@@ -79,7 +77,7 @@ const Footer = () => {
                         <ul className="w-full space-y-4">
                             <li className="flex items-start gap-2 text-sandstone/70 text-sm md:text-base">
                                 <MapPin className="w-5 h-5 text-brand shrink-0" />
-                                <span>3rd Floor, Leeds Tower, Rupaspur, Bailey Road,<br /> Patna, Bihar</span>
+                                <span>3rd Floor, Leeds Tower, Nahar Road, Rupaspur, Bailey Road, Patna, Bihar</span>
                             </li>
                             <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
                                 <Phone className="w-5 h-5 text-brand shrink-0" />
