@@ -41,10 +41,10 @@ const AboutSection = () => {
                 <div className="relative h-64 sm:h-96 lg:h-125 w-full rounded-xl overflow-hidden shadow-2xl order-1 lg:order-2">
                     <Image
                         src={core_tower_image}
-                        alt="Downtown Realtyj is one of the best real estate company in Patna Bihar developing modern townships and apartments"
+                        alt="Downtown Realtyj's Core Tower Project Image"
                         fill
                         className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        sizes="(max-width: 1024px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
@@ -58,7 +58,7 @@ const AboutSection = () => {
                         alt="Our Vision"
                         fill
                         className="object-cover opacity-90"
-                        sizes="100vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
                 </div>
