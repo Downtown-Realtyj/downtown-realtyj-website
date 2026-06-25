@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
-
-import { core_tower_image } from "../utils/constants";
+import CldImage from "./CldImage";
 
 const Hero = () => {
     return (
         <div className="w-full min-h-dvh relative overflow-hidden flex flex-col">
             <div className="absolute inset-0 -z-10 bg-black">
-                <Image
-                    src={core_tower_image}
+                <CldImage
+                    src="project-aerial-closeup_qbu7l3"
                     alt="Core Ultrawdie Tower Image"
                     fill
-                    priority
                     fetchPriority="high"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
