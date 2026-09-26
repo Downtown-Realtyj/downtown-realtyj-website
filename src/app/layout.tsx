@@ -58,16 +58,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} w-full antialiased font-sans bg-black`}
+        className={`${inter.className} w-full antialiased font-sans`}
       >
         <JsonLd data={jsonLdData}/>
         <NextIntlClientProvider>
-          <Navbar />
+          {/*<Navbar />
           <main className="w-full min-h-screen">
             {children}
             <Analytics />
           </main>
-          <Footer />
+          <Footer />*/}
         </NextIntlClientProvider>
       </body>
     </html>
