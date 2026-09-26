@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} w-full antialiased font-sans`}
+        className={`${inter.className} w-full antialiased font-sans bg-black`}
       >
         <JsonLd data={jsonLdData}/>
         <NextIntlClientProvider>
