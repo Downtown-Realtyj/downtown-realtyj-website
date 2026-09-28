@@ -62,12 +62,12 @@ export default function RootLayout({
       >
         <JsonLd data={jsonLdData}/>
         <NextIntlClientProvider>
-          {/*<Navbar />
+          <Navbar />
           <main className="w-full min-h-screen">
             {children}
             <Analytics />
           </main>
-          <Footer />*/}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
