@@ -1,95 +1,104 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Calendar
-} from 'lucide-react';
+import { MapPin, Phone, Mail, Calendar } from 'lucide-react';
 
 import MapBox from '../MapBox';
+import RERABadge from '../ReraBadge';
+import { company } from '../../data/companyData';
 import { footerLinks, quickLinks } from './constant';
+
+const headingClass = "text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6";
+const bodyText = "text-gold/80 text-sm md:text-base";
 
 const Footer = () => {
     return (
-        <footer
-            className="bg-midnight border-t border-brand text-white pt-20 pb-10"
-        >
+        <footer className="bg-midnight border-t border-brand text-white pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <div className="flex items-center space-x-2">
-                            <Image src="/logo.png" width={45} height={45} alt="Downtown Realty Logo" />
-                            <span className="font-display text-2xl md:text-3xl font-bold">
+                            <Image src="/logo.png" width={45} height={45} alt="" />
+                            <span className="text-2xl md:text-3xl font-bold">
                                 Downtown <span className="text-brand">Realtyj</span>
                             </span>
                         </div>
-                        <p className="text-sandstone/70 text-sm md:text-base leading-relaxed">
-                            Curating premier living spaces with a focus on future-ready
-                            infrastructure and sustainable development.
+                        <p className={`${bodyText} leading-relaxed`}>
+                            Your sales and marketing partner for premier residential and commercial
+                            projects in Patna, with a focus on future-ready infrastructure.
                         </p>
+
+                        <div className="space-y-2">
+                            <a
+                                href={company?.rera?.portalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block text-sm text-brand underline-offset-4 hover:underline"
+                            >
+                                <RERABadge />
+                                <span className="sr-only"> (opens in a new tab)</span>
+                            </a>
+                        </div>
 
                         {/* Social */}
                         <div>
-                            <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
-                                Follow Us On
-                            </h4>
-                            <div className="flex gap-4">
-                                {footerLinks.map((obj, i) => (
-                                    <a
-                                        key={obj.title}
-                                        href={obj.link}
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                        aria-label={obj.label}
-                                        className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-midnight transition-all duration-300"
-                                    >
-                                        <obj.icon className="w-4 h-4" />
-                                    </a>
+                            <h2 className={headingClass}>Follow Us On</h2>
+                            <ul className="flex gap-4">
+                                {footerLinks.map((obj) => (
+                                    <li key={obj.title}>
+                                        <a
+                                            href={obj.link}
+                                            rel="noopener noreferrer"
+                                            target="_blank"
+                                            aria-label={`${obj.label} (opens in a new tab)`}
+                                            className="w-11 h-11 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold hover:text-midnight transition-all duration-300"
+                                        >
+                                            <obj.icon className="w-4 h-4" aria-hidden="true" />
+                                        </a>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     </div>
 
-                    <div>
-                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
-                            Quick Links
-                        </h4>
+                    <nav aria-label="Footer">
+                        <h2 className={headingClass}>Quick Links</h2>
                         <ul className="space-y-3">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
-                                    <Link
-                                        href={link.href}
-                                        className="text-sandstone/70 hover:text-gold transition-colors text-sm md:text-base"
-                                    >
+                                    <Link href={link.href} className={`${bodyText} hover:text-gold transition-colors`}>
                                         {link.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
 
                     <div>
-                        <h4 className="text-brand font-bold uppercase tracking-wider text-sm md:text-base mb-6">
-                            Contact Us
-                        </h4>
+                        <h2 className={headingClass}>Contact Us</h2>
                         <ul className="w-full space-y-4">
-                            <li className="flex items-start gap-2 text-sandstone/70 text-sm md:text-base">
-                                <MapPin className="w-5 h-5 text-brand shrink-0" />
-                                <span>3rd Floor, Leeds Tower, Nahar Road, Rupaspur, Bailey Road, Patna, Bihar</span>
+                            <li className={`flex items-start gap-2 ${bodyText}`}>
+                                <MapPin className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+                                <address className="not-italic">{company?.address}</address>
                             </li>
-                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
-                                <Phone className="w-5 h-5 text-brand shrink-0" />
-                                <span>90318 45012, 90318 45010</span>
+                            <li className={`flex items-start gap-2 ${bodyText}`}>
+                                <Phone className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+                                <span>
+                                    {company?.phones.map((p, i) => (
+                                        <span key={p?.tel}>
+                                            {i > 0 && ", "}
+                                            <a href={`tel:${p?.tel}`} className="hover:text-gold transition-colors">{p?.display}</a>
+                                        </span>
+                                    ))}
+                                </span>
                             </li>
-                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
-                                <Mail className="w-5 h-5 text-brand shrink-0" />
-                                <a href="mailto:info@downtownrealtyj.com" className="hover:text-gold transition-colors">info@downtownrealtyj.com</a>
+                            <li className={`flex items-center gap-2 ${bodyText}`}>
+                                <Mail className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+                                <a href={`mailto:${company?.email}`} className="hover:text-gold transition-colors break-all">{company?.email}</a>
                             </li>
-                            <li className="flex items-center gap-2 text-sandstone/70 text-sm md:text-base">
-                                <Calendar className="w-5 h-5 text-brand shrink-0" />
-                                <span>Office Hours: 10 AM - 7 PM<br />Open On Sunday</span>
+                            <li className={`flex items-start gap-2 ${bodyText}`}>
+                                <Calendar className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+                                <span>Office hours: {company?.officeHours}</span>
                             </li>
                         </ul>
                     </div>
@@ -97,28 +106,24 @@ const Footer = () => {
                     <MapBox />
                 </div>
 
-                <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 border-t border-white/10 text-center">
-                    <p className="text-sandstone/50 text-xs md:text-sm">
-                        © {new Date().getFullYear()} Downtown Realtyj Private Limited. All rights reserved.
+                <div className="pt-8 border-t border-white/10 space-y-4">
+                    <p className="text-gold/60 text-xs leading-relaxed">
+                        {company?.name} is a RERA registered real estate agent and markets the projects listed on this site on
+                        behalf of their developers. Project details, prices and availability are supplied by the developers and
+                        may change. Please verify each project&apos;s RERA registration before booking.
                     </p>
-
-                    <div>
-                        <Link 
-                            href="/privacy-policy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sandstone/50 hover:text-gold transition-colors text-xs md:text-sm mx-2"
-                        >
-                            Privacy Policy
-                        </Link>
-                        <Link 
-                            href="/sitemap.xml"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sandstone/50 hover:text-gold transition-colors text-xs md:text-sm mx-2"
-                        >
-                            Sitemap
-                        </Link>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center text-center">
+                        <p className="text-gold/60 text-xs md:text-sm">
+                            © {new Date().getFullYear()} {company?.legalName}. All rights reserved.
+                        </p>
+                        <div className="text-xs md:text-sm">
+                            <Link href="/privacy-policy" className="text-gold/60 hover:text-gold transition-colors mx-2">
+                                Privacy Policy
+                            </Link>
+                            <Link href="/sitemap.xml" className="text-gold/60 hover:text-gold transition-colors mx-2">
+                                Sitemap
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

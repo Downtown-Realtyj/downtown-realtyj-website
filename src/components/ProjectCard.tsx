@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Building2 } from "lucide-react";
 import type { Project } from "../types/projectType";
-import RERABadge from "./ReraBadge";
+import RERABadge from "../components/ReraBadge";
 import StatusBadge from "./StatusBadge";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -37,7 +37,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.locality}, {project.city}
         </p>
         <p className="text-sm font-medium text-midnight">{project.propertyType}</p>
-        {project.priceFrom && <p className="text-base font-semibold text-brand">{project.priceFrom}</p>}
+        {project.priceFrom && <p className="text-base font-semibold text-midnight">{project.priceFrom}</p>}
         <RERABadge projectRera={project.projectRera} variant="light" className="self-start" />
         <Link
           href={`/projects/${project.slug}`}
