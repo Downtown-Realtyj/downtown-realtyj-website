@@ -23,10 +23,6 @@ const Navbar = () => {
     }, []);
 
     useEffect(() => {
-        setIsMobileMenuOpen(false);
-    }, [pathname]);
-
-    useEffect(() => {
         document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
         if (!isMobileMenuOpen) return;
 
@@ -89,7 +85,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     type="button"
-                    onClick={() => setIsMobileMenuOpen((v) => !v)}
+                    onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                     className="md:hidden p-3 -mr-3 text-white hover:text-brand transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-brand"
                     aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
                     aria-expanded={isMobileMenuOpen}
@@ -107,6 +103,7 @@ const Navbar = () => {
                             <li key={link.name}>
                                 <Link
                                     href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
                                     aria-current={isActive(link.href) ? 'page' : undefined}
                                     className={`block text-lg font-medium py-3 px-4 rounded-md transition-colors hover:bg-brand/20 ${
                                         isActive(link.href) ? 'text-brand bg-brand/10' : 'text-gold'
