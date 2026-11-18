@@ -9,16 +9,18 @@ export const company = {
   },
   phones: [
     { 
-        tel: "+919031845001", 
-        display: "+91 90318 45001" 
+      tel: "tel:+919031845001", 
+      display: "+91 90318 45001" 
     }, 
     { 
-        tel: "+919031845010", 
-        display: "+91 90318 45010" 
-    }],
+      tel: "tel:+919031845010", 
+      display: "+91 90318 45010" 
+    }
+  ],
+  whatsappHref: "https://wa.me/919031845011",
   email: "info@downtownrealtyj.com",
   address: "3rd Floor, Leeds Tower, Rupaspur, Patna, Bihar-801503",
-  officeHours: "10 AM - 7 PM, Open on Sunday",
+  officeHours: "10 AM - 6 PM, Open Sundays",
 } as const;
 
 export const isPlaceholder = (value: string) => value.startsWith("TODO");

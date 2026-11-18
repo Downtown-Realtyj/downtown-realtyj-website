@@ -8,7 +8,7 @@ import StatusBadge from "./StatusBadge";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-brand/20 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl">
-      <div className="relative aspect-[4/3] bg-midnight">
+      <div className="relative aspect-4/3 bg-midnight">
         {project.image ? (
           <Image
             src={project.image}

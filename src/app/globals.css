@@ -16,6 +16,13 @@
   --color-gold: var(--gold-text);
   --color-brand: var(--brand-color);
   --color-midnight: var(--midnight-color);
+  --color-champagne: #B89547;
+  --color-champagne-hover: #A68134;
+  --color-champagne-deep: #8A6C24;
+  --color-charcoal: #111827;
+  --color-stone-muted: #6B7280;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-manrope), system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
