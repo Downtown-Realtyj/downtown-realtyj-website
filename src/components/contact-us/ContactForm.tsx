@@ -42,6 +42,7 @@ const ContactForm = () => {
             }
         } catch (error) {
             setSubmitStatus('error');
+            console.error(error);
         } finally {
             setIsLoading(false);
         }
@@ -54,7 +55,7 @@ const ContactForm = () => {
                 <div className="bg-gold text-black p-8 md:p-12 lg:p-14 flex flex-col justify-between">
                     <div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Connect With Us</h2>
-                        <p className="text-slate-700 mb-8 text-base md:text-lg">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                        <p className="text-slate-700 mb-8 text-base md:text-lg">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
 
                         {/* Contact Info Items */}
                         <div className="space-y-6">

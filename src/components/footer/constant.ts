@@ -40,10 +40,10 @@ export const quickLinks = [
         name: "Projects",
         href: "/projects",
     },
-    {
+    /*{
         name: "Blogs",
         href: "/blogs",
-    },
+    },*/
     {
         name: "Contact Us",
         href: "/contact",

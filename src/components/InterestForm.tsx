@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Phone, Mail, CheckCircle, AlertCircle } from "lucide-react";
+import { CheckCircle, AlertCircle } from "lucide-react";
 import { validateForm } from "../utils/formValidation";
 
 const InterestForm = () => {
@@ -42,59 +42,15 @@ const InterestForm = () => {
             }
         } catch (error) {
             setSubmitStatus('error');
+            console.error(error);
         } finally {
             setIsLoading(false);
         }
     };
 
     return (
-        <section id="interest-form" className="py-24 bg-gold text-black">
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-20">
-                    {/* Left Side Info */}
-                    <div>
-                        <h2 className="text-slate-600 font-bold uppercase tracking-widest mb-4 text-sm md:text-base">Get in Touch</h2>
-                        <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Partner in Patna's Progress</h3>
-
-                        <div className="space-y-8">
-                            <div className="flex gap-6">
-                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <MapPin className="text-brand w-7 h-7 md:w-8 md:h-8" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg md:text-xl mb-1">Corporate Office</p>
-                                    <p className="text-slate-900 text-base md:text-lg">
-                                        3rd Floor, Leeds Tower, Rupaspur <br />
-                                        Bailey Road, Patna, Bihar (801503)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex gap-6">
-                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <Phone className="text-brand w-7 h-7 md:w-8 md:h-8" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg md:text-xl mb-1">Call Us</p>
-                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45010</p>
-                                    <p className="text-slate-900 text-base md:text-lg">+91 90318 45004</p>
-                                </div>
-                            </div>
-
-                            <div className="flex gap-6">
-                                <div className="w-14 h-14 md:w-16 md:h-16 bg-brand/25 rounded-xl flex items-center justify-center shrink-0 border border-white/10">
-                                    <Mail className="text-brand w-7 h-7 md:w-8 md:h-8" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-lg md:text-xl mb-1">Email</p>
-                                    <p className="text-slate-800 text-base md:text-lg">info@downtownrealtyj.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Side Form */}
-                    <div className="bg-white rounded-3xl p-10 md:p-12 text-slate-900 shadow-2xl">
+        <section id="interest-form">
+                    <div className="rounded-3xl p-10 md:p-12 text-slate-900 shadow-sm border border-gray-200/80">
                         <h4 className="text-2xl md:text-3xl font-bold mb-8">Register Interest</h4>
                         
                         {/* Success Message */}
@@ -102,7 +58,7 @@ const InterestForm = () => {
                             <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3 animate-fade-in-scale">
                                 <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
                                 <div>
-                                    <p className="text-green-800 text-sm font-medium">Interest registered successfully! We'll contact you soon.</p>
+                                    <p className="text-green-800 text-sm font-medium">Interest registered successfully! We&apos;ll contact you soon.</p>
                                 </div>
                             </div>
                         )}
@@ -201,8 +157,6 @@ const InterestForm = () => {
                             </p>
                         </form>
                     </div>
-                </div>
-            </div>
         </section>
     );
 };
